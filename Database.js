@@ -2,12 +2,12 @@ class DataBase {
     constructor(divId) {
         this.divId = divId
         this.database = []
-        this.temp = []
     }
 
     add() {
         let nameInput = document.querySelector('#nameInput').value
         let addressInput = document.querySelector('#addressInput').value
+
         if (nameInput.trim() === '' || addressInput.trim() === '') {
             alert('Khong duoc de trong')
         } else {
@@ -22,8 +22,15 @@ class DataBase {
     }
 
     edit(index) {
-        this.database[index] = new Student(prompt('name', this.database[index].name), prompt('address', this.database[index].address))
-        this.show()
+        let name = prompt('name', this.database[index].name)
+        let address = prompt('address', this.database[index].address)
+
+        if (name.trim() === '' || address.trim() === '') {
+            alert('Khong duoc de trong')
+        } else {
+            this.database[index] = new Student(name, address)
+            this.show()
+        }
     }
 
     show() {
