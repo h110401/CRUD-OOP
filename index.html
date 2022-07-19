@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table, tr, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 10px;
+        }
+
+        div {
+            margin: 10px;
+        }
+
+        input {
+            position: absolute;
+            left: 70px
+        }
+    </style>
+</head>
+<div style="position: relative">
+    Name: <input id="nameInput" type="text"><br><br>
+    Address: <input id="addressInput" type="text"><br><br>
+    <button id="create">Create</button>
+</div>
+
+<br>
+
+<div id="search">
+    Search: <input id="searchName" placeholder="Name..."><br><br>
+    <input id="searchAddress" placeholder="Address...">
+</div>
+
+<br>
+<br>
+
+<div id="database"></div>
+
+
+<body>
+
+<script src="Student.js"></script>
+
+<script src="Database.js"></script>
+
+<script src="main.js"></script>
+
+</body>
+</html>
